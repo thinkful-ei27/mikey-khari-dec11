@@ -299,8 +299,8 @@ const render = function() {
   const liElements = store.videos.map(video => generateVideoItemHtml(video));
   $('.results').html(liElements);
 };
-addVideosToStore(decorateResponse(MOCK_DATA));
-render();
+// addVideosToStore(decorateResponse(MOCK_DATA));
+// render();
 
 /**
  * @function handleFormSubmit
@@ -319,6 +319,8 @@ render();
 //   g) Inside the callback, run the `render` function 
 // TEST IT!
 const handleFormSubmit = function() {
+  
+.submit()
 
 };
 
