@@ -1,178 +1,180 @@
 'use strict';
-
+/* global $ */
 const API_KEY = 'AIzaSyBAKhCTOtb3-S-Wte0fjczDtEre6phRI6c';
 
-const MOCK_DATA = {
-  "kind": "youtube#searchListResponse",
-  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/rEJHCf3AxSyWVjX7ejbZm41zNWw\"",
-  "nextPageToken": "CAUQAA",
-  "regionCode": "US",
-  "pageInfo": {
-    "totalResults": 1000000,
-    "resultsPerPage": 5
+const MOCK_DATA ={
+  'kind': 'youtube#searchListResponse',
+  'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/rEJHCf3AxSyWVjX7ejbZm41zNWw"',
+  'nextPageToken': 'CAUQAA',
+  'regionCode': 'US',
+  'pageInfo': {
+    'totalResults': 1000000,
+    'resultsPerPage': 5
   },
-  "items": [
+  'items': [
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/hMPDEHxB_Rr7wy2Y5vgw0x-cfZM\"",
-      "id": {
-        "kind": "youtube#channel",
-        "channelId": "UCa_xHe7N8h1kFQsOIFWSCbQ"
+      'kind': 'youtube#searchResult',
+      'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/hMPDEHxB_Rr7wy2Y5vgw0x-cfZM"',
+      'id': {
+        'kind': 'youtube#channel',
+        'channelId': 'UCa_xHe7N8h1kFQsOIFWSCbQ'
       },
-      "snippet": {
-        "publishedAt": "2018-05-15T12:27:13.000Z",
-        "channelId": "UCa_xHe7N8h1kFQsOIFWSCbQ",
-        "title": "Little Lizard - Fortnite",
-        "description": "Welcome to Little Lizard Fortnite! We love building fun characters up and making stories around them, that's why we're making high quality, fully voice acted ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
+      'snippet': {
+        'publishedAt': '2018-05-15T12:27:13.000Z',
+        'channelId': 'UCa_xHe7N8h1kFQsOIFWSCbQ',
+        'title': 'Little Lizard - Fortnite',
+        'description': 'Welcome to Little Lizard Fortnite! We love building fun characters up and making stories around them, that\'s why we\'re making high quality, fully voice acted ...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s88-c-k-no-mo-rj-c0xffffff/photo.jpg'
           },
-          "medium": {
-            "url": "https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          'medium': {
+            'url': 'https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s240-c-k-no-mo-rj-c0xffffff/photo.jpg'
           },
-          "high": {
-            "url": "https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          'high': {
+            'url': 'https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s800-c-k-no-mo-rj-c0xffffff/photo.jpg'
           }
         },
-        "channelTitle": "Little Lizard - Fortnite",
-        "liveBroadcastContent": "upcoming"
+        'channelTitle': 'Little Lizard - Fortnite',
+        'liveBroadcastContent': 'upcoming'
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/MBYWEVE8tf8Sdb6iYE_xBNEL63w\"",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "0v1uj9lzQyQ"
+      'kind': 'youtube#searchResult',
+      'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/MBYWEVE8tf8Sdb6iYE_xBNEL63w"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': '0v1uj9lzQyQ'
       },
-      "snippet": {
-        "publishedAt": "2018-03-01T04:34:39.000Z",
-        "channelId": "UCYJkz44KRzuO8pxspJ9uocw",
-        "title": "Lizards Are Awesome",
-        "description": "I bet you didn't know you wanted a pet lizard.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/0v1uj9lzQyQ/default.jpg",
-            "width": 120,
-            "height": 90
+      'snippet': {
+        'publishedAt': '2018-03-01T04:34:39.000Z',
+        'channelId': 'UCYJkz44KRzuO8pxspJ9uocw',
+        'title': 'Lizards Are Awesome',
+        'description': 'I bet you didn\'t know you wanted a pet lizard.',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/0v1uj9lzQyQ/default.jpg',
+            'width': 120,
+            'height': 90
           },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/0v1uj9lzQyQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/0v1uj9lzQyQ/mqdefault.jpg',
+            'width': 320,
+            'height': 180
           },
-          "high": {
-            "url": "https://i.ytimg.com/vi/0v1uj9lzQyQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
+          'high': {
+            'url': 'https://i.ytimg.com/vi/0v1uj9lzQyQ/hqdefault.jpg',
+            'width': 480,
+            'height': 360
           }
         },
-        "channelTitle": "Video Digest, The Ultimate Compilations",
-        "liveBroadcastContent": "none"
+        'channelTitle': 'Video Digest, The Ultimate Compilations',
+        'liveBroadcastContent': 'none'
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/b4ZAtXlkQBAWVdYlyXDUrCCftTo\"",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "5GjEnbrJuZA"
+      'kind': 'youtube#searchResult',
+      'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/b4ZAtXlkQBAWVdYlyXDUrCCftTo"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': '5GjEnbrJuZA'
       },
-      "snippet": {
-        "publishedAt": "2018-06-21T19:00:00.000Z",
-        "channelId": "UCYK1TyKyMxyDQU8c6zF8ltg",
-        "title": "Ultimate Funny Lizard Compilation of 2018 | Funny Pet Videos",
-        "description": "This all lizard and reptile weekly comp from Funny Pet Videos is filled with hilarious bloopers and reaction shots from the funniest lizards, Geckos, Iguanas, ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/5GjEnbrJuZA/default.jpg",
-            "width": 120,
-            "height": 90
+      'snippet': {
+        'publishedAt': '2018-06-21T19:00:00.000Z',
+        'channelId': 'UCYK1TyKyMxyDQU8c6zF8ltg',
+        'title': 'Ultimate Funny Lizard Compilation of 2018 | Funny Pet Videos',
+        'description': 'This all lizard and reptile weekly comp from Funny Pet Videos is filled with hilarious bloopers and reaction shots from the funniest lizards, Geckos, Iguanas, ...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/5GjEnbrJuZA/default.jpg',
+            'width': 120,
+            'height': 90
           },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/5GjEnbrJuZA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/5GjEnbrJuZA/mqdefault.jpg',
+            'width': 320,
+            'height': 180
           },
-          "high": {
-            "url": "https://i.ytimg.com/vi/5GjEnbrJuZA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
+          'high': {
+            'url': 'https://i.ytimg.com/vi/5GjEnbrJuZA/hqdefault.jpg',
+            'width': 480,
+            'height': 360
           }
         },
-        "channelTitle": "Funny Pet Videos",
-        "liveBroadcastContent": "none"
+        'channelTitle': 'Funny Pet Videos',
+        'liveBroadcastContent': 'none'
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/pJ1VunmRIuelHxoboWU3LDf5bD8\"",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "RGagPakT-9c"
+      'kind': 'youtube#searchResult',
+      'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/pJ1VunmRIuelHxoboWU3LDf5bD8"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': 'RGagPakT-9c'
       },
-      "snippet": {
-        "publishedAt": "2018-08-30T18:23:16.000Z",
-        "channelId": "UCkrKW1_u0O8qSc3xsLoRHew",
-        "title": "BUILDING MY LIZARD HIS DREAM CAGE! (DIY)",
-        "description": "Built our lizard Bernie his dream cage and flipped into our rooftop ball pit and failed to build a fort! MouthyBuddah: https://youtu.be/bwJasDbUN84 MERCH: ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/RGagPakT-9c/default.jpg",
-            "width": 120,
-            "height": 90
+      'snippet': {
+        'publishedAt': '2018-08-30T18:23:16.000Z',
+        'channelId': 'UCkrKW1_u0O8qSc3xsLoRHew',
+        'title': 'BUILDING MY LIZARD HIS DREAM CAGE! (DIY)',
+        'description': 'Built our lizard Bernie his dream cage and flipped into our rooftop ball pit and failed to build a fort! MouthyBuddah: https://youtu.be/bwJasDbUN84 MERCH: ...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/RGagPakT-9c/default.jpg',
+            'width': 120,
+            'height': 90
           },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/RGagPakT-9c/mqdefault.jpg",
-            "width": 320,
-            "height": 180
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/RGagPakT-9c/mqdefault.jpg',
+            'width': 320,
+            'height': 180
           },
-          "high": {
-            "url": "https://i.ytimg.com/vi/RGagPakT-9c/hqdefault.jpg",
-            "width": 480,
-            "height": 360
+          'high': {
+            'url': 'https://i.ytimg.com/vi/RGagPakT-9c/hqdefault.jpg',
+            'width': 480,
+            'height': 360
           }
         },
-        "channelTitle": "Funk Bros",
-        "liveBroadcastContent": "none"
+        'channelTitle': 'Funk Bros',
+        'liveBroadcastContent': 'none'
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/sUFvkNwj9taOyNKbW_sNuzQkP_A\"",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "HCO7BWbKipU"
+      'kind': 'youtube#searchResult',
+      'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/sUFvkNwj9taOyNKbW_sNuzQkP_A"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': 'HCO7BWbKipU'
       },
-      "snippet": {
-        "publishedAt": "2018-03-02T12:00:03.000Z",
-        "channelId": "UC6E2mP01ZLH_kbAyeazCNdg",
-        "title": "You'll NEVER guess how I caught this lizard!",
-        "description": "Please SUBSCRIBE - http://bit.ly/BWchannel Tour Tickets Available Now! - http://bit.ly/bravetickets Buy Brave Wilderness Gear - http://bit.ly/BWmerch Buy ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/HCO7BWbKipU/default.jpg",
-            "width": 120,
-            "height": 90
+      'snippet': {
+        'publishedAt': '2018-03-02T12:00:03.000Z',
+        'channelId': 'UC6E2mP01ZLH_kbAyeazCNdg',
+        'title': 'You\'ll NEVER guess how I caught this lizard!',
+        'description': 'Please SUBSCRIBE - http://bit.ly/BWchannel Tour Tickets Available Now! - http://bit.ly/bravetickets Buy Brave Wilderness Gear - http://bit.ly/BWmerch Buy ...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/HCO7BWbKipU/default.jpg',
+            'width': 120,
+            'height': 90
           },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/HCO7BWbKipU/mqdefault.jpg",
-            "width": 320,
-            "height": 180
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/HCO7BWbKipU/mqdefault.jpg',
+            'width': 320,
+            'height': 180
           },
-          "high": {
-            "url": "https://i.ytimg.com/vi/HCO7BWbKipU/hqdefault.jpg",
-            "width": 480,
-            "height": 360
+          'high': {
+            'url': 'https://i.ytimg.com/vi/HCO7BWbKipU/hqdefault.jpg',
+            'width': 480,
+            'height': 360
           }
         },
-        "channelTitle": "Brave Wilderness",
-        "liveBroadcastContent": "none"
+        'channelTitle': 'Brave Wilderness',
+        'liveBroadcastContent': 'none'
       }
     }
   ]
 };
+
+
 
 /*
   We want our store to hold an array of "decorated" video objects - i.e. objects that
@@ -220,7 +222,6 @@ const fetchVideos = function(searchTerm, callback) {
   $.getJSON(BASE_URL, queryObj, callback);
 };
 
-//fetchVideos('lizard', (res) => {console.log(res); });
 
 /**
  * @function decorateResponse
@@ -238,15 +239,17 @@ const fetchVideos = function(searchTerm, callback) {
 // TEST IT! Grab an example API response and send it into the function - make sure
 // you get back the object you want.
 const decorateResponse = function(response) {
-  const result = response.items.map((item) => {
-    return {
+  const result = response.items.map(item => { 
+    return { 
       id: item.id.videoId,
       title: item.snippet.title,
-      thimbnail: item.snippet.thumbnails.default.url,
+      thumbnail: item.snippet.thumbnails.default.url
     };
   });
   return result;
 };
+
+// console.log(decorateResponse(MOCK_DATA));
 
 /**
  * @function generateVideoItemHtml
@@ -259,14 +262,17 @@ const decorateResponse = function(response) {
 // TEST IT!
 const generateVideoItemHtml = function(video) {
   return `
-  <li data-video-id="${video.id}>
-    <img src="${video.thimbnail}" />
+  <li data-video-id="${video.id}">
+    <img src="${video.thumbnail}"/>
     <h3>${video.title}</h3>
-  </li>
-  `;
+    </li>`;
 };
 const results = decorateResponse(MOCK_DATA).map((video) => generateVideoItemHtml(video));
 
+
+// console.log(generateVideoItemHtml(decorateResponse(MOCK_DATA)[1]));
+// const results = decorateResponse(MOCK_DATA).map((video) => generateVideoItemHtml(video));
+// console.log(results);
 /**
  * @function addVideosToStore
  * Store modification function to set decorated video objects
@@ -278,6 +284,9 @@ const results = decorateResponse(MOCK_DATA).map((video) => generateVideoItemHtml
 const addVideosToStore = function(videos) {
   store.videos = videos;
 };
+
+// addVideosToStore(decorateResponse(MOCK_DATA));
+// console.log(store);
 
 
 /**
@@ -292,6 +301,8 @@ const render = function() {
   const liElements = store.videos.map(video => generateVideoItemHtml(video));
   $('.results').html(liElements);
 };
+// addVideosToStore(decorateResponse(MOCK_DATA));
+// render();
 
 /**
  * @function handleFormSubmit
@@ -310,11 +321,23 @@ const render = function() {
 //   g) Inside the callback, run the `render` function 
 // TEST IT!
 const handleFormSubmit = function() {
-
+  $('#youtube-search').on('submit', function( event ){
+    console.log('entry submitted');
+    event.preventDefault();
+    const newSearch = $('#search-term').val();
+    $('#search-term').val('');
+    fetchVideos(newSearch, function(res){
+      const vidArray = decorateResponse(res);
+      console.log('decorateresponse ran', vidArray);
+      addVideosToStore(vidArray),
+      render();
+    });
+  });
 };
 
 // When DOM is ready:
 $(function () {
   // TASK:
   // 1. Run `handleFormSubmit` to bind the event listener to the DOM
+  handleFormSubmit();
 });
