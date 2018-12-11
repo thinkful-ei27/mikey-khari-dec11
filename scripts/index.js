@@ -318,9 +318,9 @@ const render = function() {
 //      `addVideosToStore` function
 //   g) Inside the callback, run the `render` function 
 // TEST IT!
-const handleFormSubmit = function() {
-  
-.submit()
+const handleFormSubmit = function(event) {
+  event.preventDefault();
+$('form').submit()
 
 };
 
