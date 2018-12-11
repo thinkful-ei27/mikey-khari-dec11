@@ -1,7 +1,178 @@
 'use strict';
 
-const API_KEY = 'YOUR_KEY_HERE';
+const API_KEY = 'AIzaSyBAKhCTOtb3-S-Wte0fjczDtEre6phRI6c';
 
+const MOCK_DATA = {
+  "kind": "youtube#searchListResponse",
+  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/rEJHCf3AxSyWVjX7ejbZm41zNWw\"",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/hMPDEHxB_Rr7wy2Y5vgw0x-cfZM\"",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCa_xHe7N8h1kFQsOIFWSCbQ"
+      },
+      "snippet": {
+        "publishedAt": "2018-05-15T12:27:13.000Z",
+        "channelId": "UCa_xHe7N8h1kFQsOIFWSCbQ",
+        "title": "Little Lizard - Fortnite",
+        "description": "Welcome to Little Lizard Fortnite! We love building fun characters up and making stories around them, that's why we're making high quality, fully voice acted ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/-5g9y7ZG0XSA/AAAAAAAAAAI/AAAAAAAAAAA/dEPRZdgaHh8/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          }
+        },
+        "channelTitle": "Little Lizard - Fortnite",
+        "liveBroadcastContent": "upcoming"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/MBYWEVE8tf8Sdb6iYE_xBNEL63w\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0v1uj9lzQyQ"
+      },
+      "snippet": {
+        "publishedAt": "2018-03-01T04:34:39.000Z",
+        "channelId": "UCYJkz44KRzuO8pxspJ9uocw",
+        "title": "Lizards Are Awesome",
+        "description": "I bet you didn't know you wanted a pet lizard.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0v1uj9lzQyQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0v1uj9lzQyQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0v1uj9lzQyQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Video Digest, The Ultimate Compilations",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/b4ZAtXlkQBAWVdYlyXDUrCCftTo\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5GjEnbrJuZA"
+      },
+      "snippet": {
+        "publishedAt": "2018-06-21T19:00:00.000Z",
+        "channelId": "UCYK1TyKyMxyDQU8c6zF8ltg",
+        "title": "Ultimate Funny Lizard Compilation of 2018 | Funny Pet Videos",
+        "description": "This all lizard and reptile weekly comp from Funny Pet Videos is filled with hilarious bloopers and reaction shots from the funniest lizards, Geckos, Iguanas, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5GjEnbrJuZA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5GjEnbrJuZA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5GjEnbrJuZA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Funny Pet Videos",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/pJ1VunmRIuelHxoboWU3LDf5bD8\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RGagPakT-9c"
+      },
+      "snippet": {
+        "publishedAt": "2018-08-30T18:23:16.000Z",
+        "channelId": "UCkrKW1_u0O8qSc3xsLoRHew",
+        "title": "BUILDING MY LIZARD HIS DREAM CAGE! (DIY)",
+        "description": "Built our lizard Bernie his dream cage and flipped into our rooftop ball pit and failed to build a fort! MouthyBuddah: https://youtu.be/bwJasDbUN84 MERCH: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RGagPakT-9c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RGagPakT-9c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RGagPakT-9c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Funk Bros",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/sUFvkNwj9taOyNKbW_sNuzQkP_A\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HCO7BWbKipU"
+      },
+      "snippet": {
+        "publishedAt": "2018-03-02T12:00:03.000Z",
+        "channelId": "UC6E2mP01ZLH_kbAyeazCNdg",
+        "title": "You'll NEVER guess how I caught this lizard!",
+        "description": "Please SUBSCRIBE - http://bit.ly/BWchannel Tour Tickets Available Now! - http://bit.ly/bravetickets Buy Brave Wilderness Gear - http://bit.ly/BWmerch Buy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HCO7BWbKipU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HCO7BWbKipU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HCO7BWbKipU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Brave Wilderness",
+        "liveBroadcastContent": "none"
+      }
+    }
+  ]
+};
 
 /*
   We want our store to hold an array of "decorated" video objects - i.e. objects that
@@ -42,10 +213,14 @@ const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
 const fetchVideos = function(searchTerm, callback) {
   const queryObj = {
     q: searchTerm,
-    part: 'snippet'
+    part: 'snippet',
+    key: API_KEY
   };
+  console.log('Made it to the JSON');
   $.getJSON(BASE_URL, queryObj, callback);
 };
+
+//fetchVideos('lizard', (res) => {console.log(res); });
 
 /**
  * @function decorateResponse
@@ -63,7 +238,14 @@ const fetchVideos = function(searchTerm, callback) {
 // TEST IT! Grab an example API response and send it into the function - make sure
 // you get back the object you want.
 const decorateResponse = function(response) {
-
+  const result = response.items.map((item) => {
+    return {
+      id: item.id.videoId,
+      title: item.snippet.title,
+      thimbnail: item.snippet.thumbnails.default.url,
+    };
+  });
+  return result;
 };
 
 /**
@@ -76,8 +258,14 @@ const decorateResponse = function(response) {
 // 1. Using the decorated object, return an HTML string containing all the expected
 // TEST IT!
 const generateVideoItemHtml = function(video) {
-
+  return `
+  <li data-video-id="${video.id}>
+    <img src="${video.thimbnail}" />
+    <h3>${video.title}</h3>
+  </li>
+  `;
 };
+const results = decorateResponse(MOCK_DATA).map((video) => generateVideoItemHtml(video));
 
 /**
  * @function addVideosToStore
@@ -88,7 +276,7 @@ const generateVideoItemHtml = function(video) {
 // 1. Set the received array as the value held in store.videos
 // TEST IT!
 const addVideosToStore = function(videos) {
-
+  store.videos = videos;
 };
 
 
@@ -101,7 +289,8 @@ const addVideosToStore = function(videos) {
 // 2. Add this array of DOM elements to the appropriate DOM element
 // TEST IT!
 const render = function() {
-
+  const liElements = store.videos.map(video => generateVideoItemHtml(video));
+  $('.results').html(liElements);
 };
 
 /**
